@@ -38,4 +38,6 @@
   <content>Report.ВКМ_РасходЗапланированныхОтпусков</content>
   <content>AccumulationRegister.ВКМ_ОтпускаСотрудников</content>
   <content>Catalog.ВКМ_УведомленияТелеграмБоту</content>
+  <content>Constant.ВКМ_ТокенУправленияТелеграмБотом</content>
+  <content>Constant.ВКМ_ИдентификаторГруппыДляОповещения</content>
 </mdclass:Subsystem>

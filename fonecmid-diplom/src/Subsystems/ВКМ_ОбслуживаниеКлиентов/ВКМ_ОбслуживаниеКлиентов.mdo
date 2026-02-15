@@ -21,4 +21,7 @@
   <content>Report.ВКМ_АнализВыставленныхАктов</content>
   <content>AccumulationRegister.ВКМ_РеализованныеУслуги</content>
   <content>Catalog.ВКМ_УведомленияТелеграмБоту</content>
+  <content>Constant.ВКМ_ТокенУправленияТелеграмБотом</content>
+  <content>Constant.ВКМ_ИдентификаторГруппыДляОповещения</content>
+  <content>Catalog.Номенклатура</content>
 </mdclass:Subsystem>
