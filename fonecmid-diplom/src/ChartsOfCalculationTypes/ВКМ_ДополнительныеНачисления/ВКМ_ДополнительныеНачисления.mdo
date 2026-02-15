@@ -38,7 +38,7 @@
   <choiceMode>BothWays</choiceMode>
   <predefined>
     <items id="208e9f4f-c198-42f7-8fc8-0c772539126c">
-      <name>Премия</name>
+      <name>Надбавка</name>
       <description>Премия</description>
       <code xsi:type="core:StringValue">
         <value>1</value>

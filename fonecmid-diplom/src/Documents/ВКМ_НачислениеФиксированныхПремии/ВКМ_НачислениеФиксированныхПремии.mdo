@@ -7,13 +7,13 @@
     <listType typeId="3c692cf8-5a4a-433e-b697-003065a80fe1" valueTypeId="30d95684-e30a-48ac-a561-93444081d637"/>
     <managerType typeId="502749e9-ab90-47dd-bcba-ac7778e05ad6" valueTypeId="9f74160e-e2af-4605-b05f-a6b882c126d2"/>
   </producedTypes>
-  <name>ВКМ_НачислениеФиксированнойПремии</name>
+  <name>ВКМ_НачислениеФиксированныхПремии</name>
   <synonym>
     <key>ru</key>
-    <value>Начисление фиксированной премии</value>
+    <value>Начисление фиксированных премии</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
-  <inputByString>Document.ВКМ_НачислениеФиксированнойПремии.StandardAttribute.Number</inputByString>
+  <inputByString>Document.ВКМ_НачислениеФиксированныхПремии.StandardAttribute.Number</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
   <createOnInput>Use</createOnInput>
   <dataLockControlMode>Managed</dataLockControlMode>
@@ -25,6 +25,7 @@
   <autonumbering>true</autonumbering>
   <registerRecords>CalculationRegister.ВКМ_ДополнительныеНачисления</registerRecords>
   <registerRecords>CalculationRegister.ВКМ_Удержания</registerRecords>
+  <registerRecords>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <tabularSections uuid="7ebb8a6c-cb96-4757-9f26-6243d9e75816">

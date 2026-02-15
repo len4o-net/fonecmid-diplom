@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ea5db5e7-6c99-4e03-81f9-dffeca18053d">
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="538d44b2-f877-49f0-84cf-bdfba5eceef2">
   <producedTypes>
-    <objectType typeId="c7420648-9aa5-4486-a963-3447b3ac8577" valueTypeId="bc00c4a5-feb6-42c8-96ac-5f1d0632f3d1"/>
-    <refType typeId="06fa6c5d-9411-419e-a0b8-3e73d6412119" valueTypeId="327fd0f6-1a58-4a7a-85e4-5f6e30b85991"/>
-    <selectionType typeId="930b32f6-618c-4a08-9921-6c37fd5788ae" valueTypeId="2b315de3-f172-495d-9b4d-8dc5e05d3ee2"/>
-    <listType typeId="29b2db6f-3f1a-4e9f-aa2d-a97d13eeb06d" valueTypeId="21437d78-ac5c-4695-b380-86c1199b524d"/>
-    <managerType typeId="f0158cb5-0027-46c3-a0c8-8d95a87bcb19" valueTypeId="c0e9ec99-a7c0-44ba-be3d-32b76c119345"/>
+    <objectType typeId="63e465d8-6a8e-42f5-a8fe-77df2bd8ab9d" valueTypeId="4477b4c6-a436-4e3e-854a-0547cfbdbc1f"/>
+    <refType typeId="f766c44e-c03e-4fc3-a304-ccf5fd5cf26d" valueTypeId="27b3a656-30e6-4c2a-8c51-a37942d9ade6"/>
+    <selectionType typeId="c7c44e42-02ae-421f-920d-c9c9fab49344" valueTypeId="1c1905eb-fb79-4761-b5b3-e0726de4da68"/>
+    <listType typeId="782a80e7-4ccf-40ef-b98e-9fd3df93bad9" valueTypeId="260decc5-2f1e-4bdc-8014-64c8dc79a9ce"/>
+    <managerType typeId="d2fa3002-4d66-4ba2-812b-96b7a1594815" valueTypeId="a904f048-bed5-4235-a992-f6e38eb95102"/>
   </producedTypes>
-  <name>ВКМ_Сотрудники</name>
+  <name>ВКМ_ГрафикиРаботы</name>
   <synonym>
     <key>ru</key>
-    <value>Сотрудники</value>
+    <value>Графики работы</value>
   </synonym>
-  <comment>Диплом. Задача: &quot;Работа с заявками клиентов&quot;</comment>
   <useStandardCommands>true</useStandardCommands>
-  <inputByString>Catalog.ВКМ_Сотрудники.StandardAttribute.Description</inputByString>
-  <inputByString>Catalog.ВКМ_Сотрудники.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.ВКМ_ГрафикиРаботы.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВКМ_ГрафикиРаботы.StandardAttribute.Code</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
   <standardAttributes>
     <dataHistory>Use</dataHistory>
@@ -98,12 +97,12 @@
   <fullTextSearch>Use</fullTextSearch>
   <objectPresentation>
     <key>ru</key>
-    <value>Сотрудник</value>
+    <value>График работы</value>
   </objectPresentation>
   <levelCount>2</levelCount>
   <foldersOnTop>true</foldersOnTop>
   <codeLength>9</codeLength>
-  <descriptionLength>50</descriptionLength>
+  <descriptionLength>25</descriptionLength>
   <codeType>String</codeType>
   <codeAllowedLength>Variable</codeAllowedLength>
   <checkUnique>true</checkUnique>
@@ -111,20 +110,4 @@
   <defaultPresentation>AsDescription</defaultPresentation>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
-  <attributes uuid="65735fa0-33bf-4a03-9579-9072b1cad9a5">
-    <name>Должность</name>
-    <synonym>
-      <key>ru</key>
-      <value>Должность</value>
-    </synonym>
-    <type>
-      <types>EnumRef.ВКМ_ДолжностиСотрудников</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
 </mdclass:Catalog>

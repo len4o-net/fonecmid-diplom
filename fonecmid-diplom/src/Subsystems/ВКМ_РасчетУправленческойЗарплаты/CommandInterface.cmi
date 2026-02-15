@@ -8,13 +8,31 @@
       </visible>
     </visibilityFragments>
     <visibilityFragments>
-      <command>Document.ВКМ_НачислениеЗарплаты.StandardCommand.OpenList</command>
+      <command>Catalog.ВКМ_ГрафикиРаботы.StandardCommand.OpenList</command>
       <visible>
         <common>true</common>
       </visible>
     </visibilityFragments>
     <visibilityFragments>
-      <command>Document.ВКМ_НачислениеФиксированнойПремии.StandardCommand.OpenList</command>
+      <command>Document.ВКМ_НачислениеЗаработнойПлаты.StandardCommand.OpenList</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>Document.ВКМ_НачислениеФиксированныхПремии.StandardCommand.OpenList</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>Document.ВКМ_ВыплатаЗарплаты.StandardCommand.OpenList</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>Document.ВКМ_ГрафикОтпусков.StandardCommand.OpenList</command>
       <visible>
         <common>true</common>
       </visible>
@@ -50,6 +68,18 @@
       </visible>
     </visibilityFragments>
     <visibilityFragments>
+      <command>InformationRegister.ВКМ_РежимРаботы.StandardCommand.OpenList</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками.StandardCommand.OpenList</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
+    <visibilityFragments>
       <command>ChartOfCalculationTypes.ВКМ_Удержания.StandardCommand.OpenList</command>
       <visible>
         <common>true</common>
@@ -72,11 +102,14 @@
     <placementFragments>
       <group>CommandGroup.Справочники</group>
       <commands>Catalog.ВКМ_Сотрудники.StandardCommand.OpenList</commands>
+      <commands>Catalog.ВКМ_ГрафикиРаботы.StandardCommand.OpenList</commands>
     </placementFragments>
     <placementFragments>
       <group>CommandGroup.Документы</group>
-      <commands>Document.ВКМ_НачислениеЗарплаты.StandardCommand.OpenList</commands>
-      <commands>Document.ВКМ_НачислениеФиксированнойПремии.StandardCommand.OpenList</commands>
+      <commands>Document.ВКМ_НачислениеЗаработнойПлаты.StandardCommand.OpenList</commands>
+      <commands>Document.ВКМ_НачислениеФиксированныхПремии.StandardCommand.OpenList</commands>
+      <commands>Document.ВКМ_ВыплатаЗарплаты.StandardCommand.OpenList</commands>
+      <commands>Document.ВКМ_ГрафикОтпусков.StandardCommand.OpenList</commands>
     </placementFragments>
     <placementFragments>
       <group>CommandGroup.Регистры</group>
@@ -85,6 +118,8 @@
       <commands>CalculationRegister.ВКМ_Удержания.StandardCommand.OpenList</commands>
       <commands>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы.StandardCommand.OpenList</commands>
       <commands>InformationRegister.ВКМ_УсловияОплатыСотрудников.StandardCommand.OpenList</commands>
+      <commands>InformationRegister.ВКМ_РежимРаботы.StandardCommand.OpenList</commands>
+      <commands>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками.StandardCommand.OpenList</commands>
     </placementFragments>
     <placementFragments>
       <group>CommandGroup.ВидыРасчета</group>
@@ -97,11 +132,14 @@
     <orderFragments>
       <group>CommandGroup.Справочники</group>
       <commands>Catalog.ВКМ_Сотрудники.StandardCommand.OpenList</commands>
+      <commands>Catalog.ВКМ_ГрафикиРаботы.StandardCommand.OpenList</commands>
     </orderFragments>
     <orderFragments>
       <group>CommandGroup.Документы</group>
-      <commands>Document.ВКМ_НачислениеЗарплаты.StandardCommand.OpenList</commands>
-      <commands>Document.ВКМ_НачислениеФиксированнойПремии.StandardCommand.OpenList</commands>
+      <commands>Document.ВКМ_НачислениеЗаработнойПлаты.StandardCommand.OpenList</commands>
+      <commands>Document.ВКМ_НачислениеФиксированныхПремии.StandardCommand.OpenList</commands>
+      <commands>Document.ВКМ_ВыплатаЗарплаты.StandardCommand.OpenList</commands>
+      <commands>Document.ВКМ_ГрафикОтпусков.StandardCommand.OpenList</commands>
     </orderFragments>
     <orderFragments>
       <group>CommandGroup.Регистры</group>
@@ -110,6 +148,8 @@
       <commands>CalculationRegister.ВКМ_Удержания.StandardCommand.OpenList</commands>
       <commands>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы.StandardCommand.OpenList</commands>
       <commands>InformationRegister.ВКМ_УсловияОплатыСотрудников.StandardCommand.OpenList</commands>
+      <commands>InformationRegister.ВКМ_РежимРаботы.StandardCommand.OpenList</commands>
+      <commands>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками.StandardCommand.OpenList</commands>
     </orderFragments>
     <orderFragments>
       <group>CommandGroup.ВидыРасчета</group>
