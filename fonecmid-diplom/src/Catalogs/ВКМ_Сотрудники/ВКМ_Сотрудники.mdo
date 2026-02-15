@@ -12,6 +12,7 @@
     <key>ru</key>
     <value>Сотрудники</value>
   </synonym>
+  <comment>Диплом. Задача: &quot;Работа с заявками клиентов&quot;</comment>
   <useStandardCommands>true</useStandardCommands>
   <inputByString>Catalog.ВКМ_Сотрудники.StandardAttribute.Description</inputByString>
   <inputByString>Catalog.ВКМ_Сотрудники.StandardAttribute.Code</inputByString>

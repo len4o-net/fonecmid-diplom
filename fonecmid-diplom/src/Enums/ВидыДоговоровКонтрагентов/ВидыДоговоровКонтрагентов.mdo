@@ -32,6 +32,6 @@
       <key>ru</key>
       <value>Абоненское обслуживание</value>
     </synonym>
-    <comment>Задача по диплому</comment>
+    <comment>Диплом. Задача: &quot;Работа с заявками клиентов&quot;</comment>
   </enumValues>
 </mdclass:Enum>

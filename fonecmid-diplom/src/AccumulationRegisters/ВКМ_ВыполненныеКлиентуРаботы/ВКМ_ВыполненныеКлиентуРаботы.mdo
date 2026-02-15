@@ -13,6 +13,7 @@
     <key>ru</key>
     <value>Выполненные клиенту работы</value>
   </synonym>
+  <comment>Диплом. Задача: &quot;Работа с заявками клиентов&quot;</comment>
   <useStandardCommands>true</useStandardCommands>
   <dataLockControlMode>Managed</dataLockControlMode>
   <enableTotalsSplitting>true</enableTotalsSplitting>

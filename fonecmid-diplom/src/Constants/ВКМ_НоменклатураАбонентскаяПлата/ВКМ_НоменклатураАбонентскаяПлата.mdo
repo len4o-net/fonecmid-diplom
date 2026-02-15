@@ -10,6 +10,7 @@
     <key>ru</key>
     <value>Номенклатура абонентская плата</value>
   </synonym>
+  <comment>Диплом. Задача: &quot;Работа с заявками клиентов&quot;</comment>
   <type>
     <types>CatalogRef.Номенклатура</types>
   </type>

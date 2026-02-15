@@ -9,6 +9,7 @@
     <key>ru</key>
     <value>Массовое создание актов</value>
   </synonym>
+  <comment>Диплом. Задача: &quot;Работа с заявками клиентов&quot;</comment>
   <useStandardCommands>true</useStandardCommands>
   <defaultForm>DataProcessor.ВКМ_МассовоеСозданиеАктов.Form.Форма</defaultForm>
   <attributes uuid="00776e50-3a4e-4d48-b7b6-3cc952e35a25">

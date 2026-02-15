@@ -5,6 +5,7 @@
     <key>ru</key>
     <value>Обслуживание клиентов (ВКМ)</value>
   </synonym>
+  <comment>Диплом. Задача: &quot;Работа с заявками клиентов&quot;</comment>
   <includeHelpInContents>true</includeHelpInContents>
   <includeInCommandInterface>true</includeInCommandInterface>
   <content>Catalog.ДоговорыКонтрагентов</content>
