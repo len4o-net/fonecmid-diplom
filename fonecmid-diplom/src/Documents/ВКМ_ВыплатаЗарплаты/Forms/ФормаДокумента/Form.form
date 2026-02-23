@@ -491,6 +491,7 @@
     <commandBar/>
   </commandInterface>
   <extInfo xsi:type="form:DocumentFormExtInfo">
+    <autoTime>DontUse</autoTime>
     <repostOnWrite>true</repostOnWrite>
   </extInfo>
 </form:Form>

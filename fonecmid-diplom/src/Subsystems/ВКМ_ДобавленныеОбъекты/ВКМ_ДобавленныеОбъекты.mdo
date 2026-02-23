@@ -31,7 +31,6 @@
   <content>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</content>
   <content>Document.ВКМ_ВыплатаЗарплаты</content>
   <content>Document.ВКМ_ГрафикОтпусков</content>
-  <content>Report.ВКМ_ВыработкаСпециалистов</content>
   <content>Report.ВКМ_АнализВыставленныхАктов</content>
   <content>AccumulationRegister.ВКМ_РеализованныеУслуги</content>
   <content>Report.ВКМ_РасчетыССотрудниками</content>
@@ -40,4 +39,10 @@
   <content>Catalog.ВКМ_УведомленияТелеграмБоту</content>
   <content>Constant.ВКМ_ТокенУправленияТелеграмБотом</content>
   <content>Constant.ВКМ_ИдентификаторГруппыДляОповещения</content>
+  <content>Role.ВКМ_РаботаСЗаявкамиКлиентов</content>
+  <content>Role.ВКМ_МассовоеСозданиеДокументовРеализация</content>
+  <content>Role.ВКМ_РаботаСФайлами</content>
+  <content>Role.ВКМ_РасчетУправленческойЗарплаты</content>
+  <content>Role.ВКМ_РаботаСОтчетомВыработкаСпециалистов</content>
+  <content>Report.ВКМ_ВыработкаСпециалистов</content>
 </mdclass:Subsystem>

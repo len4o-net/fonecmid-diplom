@@ -7,16 +7,6 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаКОплате</dataPath>
-			<field>СуммаКОплате</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сумма к оплате</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Клиент</dataPath>
 			<field>Клиент</field>
 			<role>
@@ -35,16 +25,6 @@
 			<field>Услуга</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Номенклатура</dataPath>
-			<field>Номенклатура</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Номенклатура</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>ФактическаяСумма</dataPath>
 			<field>ФактическаяСумма</field>
 			<title xsi:type="v8:LocalStringType">
@@ -53,40 +33,59 @@
 					<v8:content>Фактическая сумма</v8:content>
 				</v8:item>
 			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаКОплате</dataPath>
+			<field>СуммаКОплате</field>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ВКМ_НоменклатураРаботыСпециалиста.Значение КАК Номенклатура,
 	ВКМ_РеализованныеУслугиОбороты.Клиент КАК Клиент,
 	ВКМ_РеализованныеУслугиОбороты.Договор КАК Договор,
-	ВКМ_РеализованныеУслугиОбороты.СуммаОборот КАК ФактическаяСумма
-ПОМЕСТИТЬ ВТ_ФактическаяСуммаКонстанты
+	ВКМ_РеализованныеУслугиОбороты.Услуга КАК Услуга,
+	ВКМ_РеализованныеУслугиОбороты.СуммаОборот КАК СуммаКОплате
+ПОМЕСТИТЬ ВТ_СуммаПоАкту
 ИЗ
-	Константа.ВКМ_НоменклатураРаботыСпециалиста КАК ВКМ_НоменклатураРаботыСпециалиста
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ВКМ_РеализованныеУслуги.Обороты(&amp;НачалоПериода, &amp;КонецПериода, , ) КАК ВКМ_РеализованныеУслугиОбороты
-		ПО ВКМ_НоменклатураРаботыСпециалиста.Значение = ВКМ_РеализованныеУслугиОбороты.Услуга
+	РегистрНакопления.ВКМ_РеализованныеУслуги.Обороты(&amp;НачалоПериода, &amp;КонецПериода,,) КАК ВКМ_РеализованныеУслугиОбороты
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
-	ВКМ_ВыполненныеКлиентуРаботыОбороты.Клиент КАК Клиент,
-	ВКМ_ВыполненныеКлиентуРаботыОбороты.Договор КАК Договор,
-	ВКМ_ВыполненныеКлиентуРаботыОбороты.СуммаКОплатеОборот КАК СуммаКОплате,
-	ВТ_ФактическаяСуммаКонстанты.Номенклатура КАК Номенклатура,
-	ВТ_ФактическаяСуммаКонстанты.ФактическаяСумма КАК ФактическаяСумма
+	ВТ_СуммаПоАкту.Клиент КАК Клиент,
+	ВТ_СуммаПоАкту.Договор КАК Договор,
+	ВТ_СуммаПоАкту.Услуга КАК Услуга,
+	ВТ_СуммаПоАкту.СуммаКОплате КАК СуммаКОплате,
+	ЕСТЬNULL(ВКМ_ВыполненныеКлиентуРаботыОбороты.СуммаКОплатеОборот, 0) КАК ФактическаяСумма
 ИЗ
-	РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы.Обороты(&amp;НачалоПериода, &amp;КонецПериода, , ) КАК ВКМ_ВыполненныеКлиентуРаботыОбороты
-		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ФактическаяСуммаКонстанты КАК ВТ_ФактическаяСуммаКонстанты
-		ПО ВКМ_ВыполненныеКлиентуРаботыОбороты.Клиент = ВТ_ФактическаяСуммаКонстанты.Клиент
-			И ВКМ_ВыполненныеКлиентуРаботыОбороты.Договор = ВТ_ФактическаяСуммаКонстанты.Договор</query>
+	ВТ_СуммаПоАкту КАК ВТ_СуммаПоАкту
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы.Обороты(&amp;НачалоПериода, &amp;КонецПериода,,) КАК
+			ВКМ_ВыполненныеКлиентуРаботыОбороты
+		ПО ВТ_СуммаПоАкту.Клиент = ВКМ_ВыполненныеКлиентуРаботыОбороты.Клиент
+		И ВТ_СуммаПоАкту.Договор = ВКМ_ВыполненныеКлиентуРаботыОбороты.Договор
+		И ВТ_СуммаПоАкту.Услуга В
+			(ВЫБРАТЬ
+				ВКМ_НоменклатураРаботыСпециалиста.Значение КАК Значение
+			ИЗ
+				Константа.ВКМ_НоменклатураРаботыСпециалиста КАК ВКМ_НоменклатураРаботыСпециалиста)</query>
 	</dataSet>
-	<totalField>
-		<dataPath>СуммаКОплате</dataPath>
-		<expression>Сумма(СуммаКОплате)</expression>
-	</totalField>
 	<totalField>
 		<dataPath>ФактическаяСумма</dataPath>
 		<expression>Сумма(ФактическаяСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаКОплате</dataPath>
+		<expression>Сумма(СуммаКОплате)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -200,7 +199,12 @@
 	</groupTemplate>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Анализ выставленных актов</v8:content>
+			</v8:item>
+		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -210,10 +214,10 @@
 					<dcsset:field>Договор</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаКОплате</dcsset:field>
+					<dcsset:field>Услуга</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Номенклатура</dcsset:field>
+					<dcsset:field>СуммаКОплате</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ФактическаяСумма</dcsset:field>
@@ -273,6 +277,10 @@
 					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
 					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
 				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеПолейГруппировки</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupFieldsPlacement">SeparatelyAndInTotalsOnly</dcscor:value>
+				</dcscor:item>
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:name>Заголовок</dcsset:name>
@@ -290,12 +298,44 @@
 				</dcsset:outputParameters>
 			</dcsset:item>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Клиент</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Договор</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+					</dcsset:item>
+				</dcsset:groupItems>
 				<dcsset:order>
 					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 				</dcsset:order>
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>РасположениеПолейГруппировки</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionGroupFieldsPlacement">Together</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">WithOwnerField</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
 			</dcsset:item>
 		</dcsset:settings>
 	</settingsVariant>
